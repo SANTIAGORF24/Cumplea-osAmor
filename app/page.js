@@ -1,17 +1,15 @@
-import NewBanner from "@/components/Home/NewBanner";
-import NewProyects from "@/components/Home/Proyects/NewProyects";
-import Team from "@/components/Home/Team/Team";
-import ContactUs from "@/components/Home/ContactUs/ContactUs";
-import Clientes from "@/components/Home/Clientes/Clientes";
-import AboutSectionWithCards from "@/components/Home/AboutUs/AboutSectionWithCards";
+import AnimeQuotesGrid from "@/components/Home/animeQuotes";
+import { Banner } from "@/components/Home/Banner";
+import BigBangQuotesGrid from "@/components/Home/bigBangQuotes";
+import QuotesGrid from "@/components/Home/QuotesGrid";
 
 export default function Home() {
   return (
     <>
-      <NewBanner />
-      <AboutSectionWithCards />
-      <NewProyects />
-      <Clientes />
+      <Banner />
+      <QuotesGrid />
+      <AnimeQuotesGrid />
+      <BigBangQuotesGrid />
     </>
   );
 }
