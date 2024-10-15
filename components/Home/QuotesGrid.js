@@ -29,7 +29,7 @@ const quotes = [
   {
     episode: "The Walking Dead: The Ones Who Live, Temporada 1, Episodio 5",
     timestamp: "No disponible en español latino",
-    text: "En un mundo donde es tan dificl encontrar a alguien con buenos sentimientos y que ame de verdsd te encontré a ti.",
+    text: "En un mundo donde es tan dificl encontrar a alguien con buenos sentimientos y que ame de verdad te encontré a ti.",
     link: "https://www.youtube.com/watch?v=7GDP2c6RrH4&ab_channel=AgustinaBel%C3%A9n",
   },
 ];
