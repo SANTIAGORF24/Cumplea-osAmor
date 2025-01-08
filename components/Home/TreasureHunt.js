@@ -16,39 +16,40 @@ const TreasureHunt = () => {
     {
       title: "Primera Pista 🎁",
       message:
-        "En el lugar donde los aromas dulces flotan y el café se prepara cada mañana...",
-      hint: "Regalo 1: Busca en la cocina",
+        "Busca 🌟 donde al comer se te cae la comida... 🥄🍴 Ahí, en algún lugar bajo la mesa o cerca de las sillas, encontrarás tu primer regalo 🎀. ¡No olvides revisar bien! 👀",
+      hint: "Regalo 1",
       bg: "bg-blue-100",
       buttonText: "¡Encontré el regalo!",
     },
     {
       title: "Segunda Pista 🎈",
       message:
-        "Donde descansas después de un largo día, entre almohadas suaves podrías encontrar...",
-      hint: "Regalo 2: Tu habitación guarda secretos",
+        "Piensa en el lugar 🐾 donde quien ladra ladra descansa. 🐕‍🦺 Una casita con puertas y ventanas 🏠 puede ser el escondite perfecto para tu segundo regalo 🎁. ¡No te olvides de mirar bien entre las esquinas! 🔎",
+      hint: "Regalo 2",
       bg: "bg-purple-100",
       buttonText: "¡Encontré el regalo!",
     },
     {
       title: "Tercera Pista 🌟",
       message:
-        "El lugar donde te refrescas y te arreglas cada día tiene una sorpresa especial...",
-      hint: "Regalo 3: Revisa el baño",
+        "Busca en el sitio donde la ropa se vuelve limpia 🧺✨ y donde las sábanas se cuelgan al sol 🌞. El lugar del lavado y secado esconde tu tercer regalo 🎀. ¡Chequea cada rincón! 🧦👚",
+      hint: "Regalo 3",
       bg: "bg-green-100",
       buttonText: "¡Encontré el regalo!",
     },
     {
       title: "Cuarta Pista 🎨",
-      message: "Entre libros y tecnología, donde estudias con dedicación...",
-      hint: "Regalo 4: Tu escritorio tiene algo para ti",
+      message:
+        "Explora donde guardas tus outfits favoritos 👗👖 y el álbum de recuerdos de tus 15 años 📖💃. Quizás tu cuarto regalo 🎁 está esperando en un cajón o en un rincón de ese lugar.",
+      hint: "Regalo 4",
       bg: "bg-yellow-100",
       buttonText: "¡Encontré el regalo!",
     },
     {
       title: "Quinta Pista 🌈",
       message:
-        "El lugar donde toda la familia se reúne a compartir risas y historias...",
-      hint: "Regalo 5: La sala tiene el último regalo",
+        "Mírate al espejo 🪞 mientras aplicas tu delineador favorito 🖌️👁️. Justo detrás de tu reflejo 🌟 es posible que se oculte tu quinto regalo 🎀. ¡Revisa detrás del espejo con cuidado!",
+      hint: "Regalo 5",
       bg: "bg-orange-100",
       buttonText: "¡Encontré el último regalo!",
     },
