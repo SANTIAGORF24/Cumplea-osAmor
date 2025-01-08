@@ -55,7 +55,7 @@ const TreasureHunt = () => {
     {
       title: "¡Lo lograste! 🎊",
       message:
-        "¡Encontraste todos los regalos! Esperamos te gusten y recuerda que te amo mucho ❤️",
+        "¡Encontraste todos los regalos! Espero te gusten y recuerda que te amo mucho ❤️",
       hint: "",
       bg: "bg-red-100",
     },
