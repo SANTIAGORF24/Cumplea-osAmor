@@ -16,7 +16,7 @@ const TreasureHunt = () => {
     {
       title: "Primera Pista 🎁",
       message:
-        "Busca 🌟 donde al comer se te cae la comida... 🥄🍴 Ahí, en algún lugar bajo la mesa o cerca de las sillas, encontrarás tu primer regalo 🎀. ¡No olvides revisar bien! 👀",
+        "Si miras abajo, donde muchas veces se esconden restos de un festín 🥢🕵️, ahí encontrarás algo que te sorprenderá. No busques en lo obvio, sino donde las pequeñas migajas 🧹 encuentran su refugio...",
       hint: "Regalo 1",
       bg: "bg-blue-100",
       buttonText: "¡Encontré el regalo!",
@@ -24,7 +24,7 @@ const TreasureHunt = () => {
     {
       title: "Segunda Pista 🎈",
       message:
-        "Piensa en el lugar 🐾 donde quien ladra ladra descansa. 🐕‍🦺 Una casita con puertas y ventanas 🏠 puede ser el escondite perfecto para tu segundo regalo 🎁. ¡No te olvides de mirar bien entre las esquinas! 🔎",
+        "Piensa en el lugar 🐾 donde la mas mimada de la casa descansa. 🐕‍🦺 puede ser el escondite perfecto para tu segundo regalo 🎁. ¡No te olvides de mirar bien entre las esquinas! 🔎",
       hint: "Regalo 2",
       bg: "bg-purple-100",
       buttonText: "¡Encontré el regalo!",
@@ -32,7 +32,7 @@ const TreasureHunt = () => {
     {
       title: "Tercera Pista 🌟",
       message:
-        "Busca en el sitio donde la ropa se vuelve limpia 🧺✨ y donde las sábanas se cuelgan al sol 🌞. El lugar del lavado y secado esconde tu tercer regalo 🎀. ¡Chequea cada rincón! 🧦👚",
+        "En el reino donde el agua limpia todo lo que llevas puesto 💦🧺 y donde los rayos del sol 🌞 o el viento soplan entre las telas, hay un escondite secreto. No mires donde los colores se esconden, mira donde todo gira y gira 🧦👚",
       hint: "Regalo 3",
       bg: "bg-green-100",
       buttonText: "¡Encontré el regalo!",
@@ -40,7 +40,7 @@ const TreasureHunt = () => {
     {
       title: "Cuarta Pista 🎨",
       message:
-        "Explora donde guardas tus outfits favoritos 👗👖 y el álbum de recuerdos de tus 15 años 📖💃. Quizás tu cuarto regalo 🎁 está esperando en un cajón o en un rincón de ese lugar.",
+        "Explora donde guardas tus outfits favoritos 👗👖 y el álbum que no me has dejado ver 📖💃. Quizás tu cuarto regalo 🎁 está esperando en un cajón o en un rincón de ese lugar.",
       hint: "Regalo 4",
       bg: "bg-yellow-100",
       buttonText: "¡Encontré el regalo!",
@@ -48,7 +48,7 @@ const TreasureHunt = () => {
     {
       title: "Quinta Pista 🌈",
       message:
-        "Mírate al espejo 🪞 mientras aplicas tu delineador favorito 🖌️👁️. Justo detrás de tu reflejo 🌟 es posible que se oculte tu quinto regalo 🎀. ¡Revisa detrás del espejo con cuidado!",
+        "Te miras cada día ahí 🪞, pero ¿alguna vez te has preguntado qué hay detrás de lo que ves? 👁️ Busca donde los secretos de tu belleza se reflejan 🌟, detrás o quizás muy cerca, donde lo superficial no alcanza a revelar lo oculto.",
       hint: "Regalo 5",
       bg: "bg-orange-100",
       buttonText: "¡Encontré el último regalo!",
