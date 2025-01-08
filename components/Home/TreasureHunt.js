@@ -6,6 +6,7 @@ const TreasureHunt = () => {
   const [sliderPosition, setSliderPosition] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [startX, setStartX] = useState(0);
   const sliderRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -60,13 +61,12 @@ const TreasureHunt = () => {
     },
   ];
 
-  const handleSliderStart = (e) => {
-    if (e.type === "mousedown") {
-      setIsDragging(true);
-    }
+  const handleStart = (clientX) => {
+    setIsDragging(true);
+    setStartX(clientX - sliderPosition);
   };
 
-  const handleSliderMove = (e) => {
+  const handleMove = (clientX) => {
     if (!isDragging) return;
 
     const container = containerRef.current;
@@ -77,7 +77,7 @@ const TreasureHunt = () => {
     const containerRect = container.getBoundingClientRect();
     const maxX = containerRect.width - slider.offsetWidth;
 
-    let newX = e.clientX - containerRect.left - slider.offsetWidth / 2;
+    let newX = clientX - startX;
     newX = Math.max(0, Math.min(newX, maxX));
 
     const newProgress = (newX / maxX) * 100;
@@ -85,14 +85,12 @@ const TreasureHunt = () => {
     setSliderPosition(newX);
 
     if (newX >= maxX * 0.9) {
-      setIsDragging(false);
-      setSliderPosition(0);
-      setProgress(0);
+      handleEnd();
       handleNext();
     }
   };
 
-  const handleSliderEnd = () => {
+  const handleEnd = () => {
     setIsDragging(false);
     if (sliderPosition < (containerRef.current?.offsetWidth || 0) * 0.9) {
       setSliderPosition(0);
@@ -100,18 +98,45 @@ const TreasureHunt = () => {
     }
   };
 
+  // Eventos de mouse
+  const handleMouseStart = (e) => {
+    handleStart(e.clientX);
+  };
+
+  const handleMouseMove = (e) => {
+    handleMove(e.clientX);
+  };
+
+  // Eventos táctiles
+  const handleTouchStart = (e) => {
+    handleStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    handleMove(e.touches[0].clientX);
+  };
+
   const handleNext = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
+      setSliderPosition(0);
+      setProgress(0);
     }
   };
 
   useEffect(() => {
-    document.addEventListener("mousemove", handleSliderMove);
-    document.addEventListener("mouseup", handleSliderEnd);
+    if (isDragging) {
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleEnd);
+      document.addEventListener("touchmove", handleTouchMove);
+      document.addEventListener("touchend", handleEnd);
+    }
+
     return () => {
-      document.removeEventListener("mousemove", handleSliderMove);
-      document.removeEventListener("mouseup", handleSliderEnd);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleEnd);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleEnd);
     };
   }, [isDragging]);
 
@@ -140,7 +165,7 @@ const TreasureHunt = () => {
           {currentStep < steps.length - 1 ? (
             <div
               ref={containerRef}
-              className="relative h-14 bg-gray-200 rounded-full mt-6 cursor-pointer overflow-hidden"
+              className="relative h-14 bg-gray-200 rounded-full mt-6 cursor-pointer overflow-hidden touch-none"
             >
               {/* Barra de progreso */}
               <div
@@ -154,9 +179,9 @@ const TreasureHunt = () => {
                 className="absolute top-0 left-0 h-full aspect-square bg-white rounded-full shadow-lg cursor-grab active:cursor-grabbing transform transition-transform hover:scale-105 z-10"
                 style={{
                   transform: `translateX(${sliderPosition}px)`,
-                  touchAction: "none",
                 }}
-                onMouseDown={handleSliderStart}
+                onMouseDown={handleMouseStart}
+                onTouchStart={handleTouchStart}
               >
                 <div className="flex items-center justify-center h-full text-pink-500">
                   <span className="text-2xl">→</span>
