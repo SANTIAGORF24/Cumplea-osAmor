@@ -8,7 +8,7 @@ const TreasureHunt = () => {
     {
       title: "¡Feliz Cumpleaños! 🎉",
       message:
-        "Es hora de buscar tus regalos especiales. ¿Estás list@ para la aventura?",
+        "Es hora de buscar tus regalos especiales. ¿Estás lista para la aventura amor?",
       hint: "",
       bg: "bg-pink-100",
       buttonText: "¡Empezar la búsqueda!",
