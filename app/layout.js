@@ -9,10 +9,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>MINUTOS PARA DEDICAR</title>
+        <title>FELIZ CUMPELAÑOS AMOR</title>
         <meta
           name="description"
-          content="Sitio web de Sibartech, una empresa especializada en desarrollo web profesional. Ofrecemos soluciones innovadoras y personalizadas para tus necesidades en línea."
+          content="Cumpleaños de mi amor, te amo mucho"
         />
       </head>
       <body
