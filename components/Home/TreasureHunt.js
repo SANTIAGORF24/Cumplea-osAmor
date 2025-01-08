@@ -84,7 +84,7 @@ const TreasureHunt = () => {
     setProgress(newProgress);
     setSliderPosition(newX);
 
-    if (newX >= maxX * 0.9) {
+    if (newX >= maxX) {
       handleEnd();
       handleNext();
     }
